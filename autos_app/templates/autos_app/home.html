@@ -2,7 +2,12 @@
 {% load static %}
 
 {% block content %}
+<div class="container">
     <h2>Inventario de Autos</h2>
-    <a href="{% url 'listar_autos' %}">Ver Autos</a>
-    <a href="{% url 'agregar_auto' %}">Agregar Nuevo Auto</a>
+
+    <div class="links">
+        <a href="{% url 'listar_autos' %}" class="btn">Ver Autos</a>
+        <a href="{% url 'agregar_auto' %}" class="btn secondary">Agregar Nuevo Auto</a>
+    </div>
+</div>
 {% endblock %}
