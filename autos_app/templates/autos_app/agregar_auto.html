@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<h2>Add New Auto</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="marca">Brand:</label>
+    <input type="text" id="marca" name="marca" required>
+    <label for="modelo">Model:</label>
+    <input type="text" id="modelo" name="modelo" required>
+    <label for="año">Year:</label>
+    <input type="number" id="año" name="año" required>
+    <label for="precio">Price:</label>
+    <input type="number" id="precio" name="precio" step="0.01" required>
+    <button type="submit">Add Auto</button>
+</form>
+<a href="{% url 'listar_autos' %}">Ver Autos</a>
+<a href="{% url 'home' %}">Home</a>
+{% endblock %}
